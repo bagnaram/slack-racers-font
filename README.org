@@ -4,10 +4,10 @@
 This UserCSS gives slack a more fun appearance while also cutting down on the
 bloat!
 
-* Requirements:
-** [[https://github.com/envyniv/RacersFont][RacersFont]]
-** Stylus browser extension
+[[/screenshot.jpg][screenshot]]
 
-#+BEGIN_EXPORT html
-<a href=/slack-racers-font.user.css><img src=https://img.shields.io/badge/Install%20directly%20with-Stylus-116b59.svg?longCache=true&style=for-the-badge></a>
-#+END_EXPORT
+* Requirements:
+1. [[https://github.com/envyniv/RacersFont][RacersFont]]
+2. Stylus browser extension
+
+[[/slack-racers-font.user.css][Install With Stylus]]
