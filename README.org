@@ -10,4 +10,4 @@ bloat!
 1. [[https://github.com/envyniv/RacersFont][RacersFont]]
 2. Stylus browser extension
 
-[[/slack-racers-font.user.css][Install With Stylus]]
+[[https://github.com/bagnaram/slack-racers-font/raw/master/slack-racers-font.user.css][Install With Stylus]]
