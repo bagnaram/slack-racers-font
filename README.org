@@ -4,7 +4,7 @@
 This UserCSS gives slack a more fun appearance while also cutting down on the
 bloat!
 
-[[https://raw.githubusercontent.com/bagnaram/slack-racers-font/master/screenshot.jpg][screenshot]]
+[[https://raw.githubusercontent.com/bagnaram/slack-racers-font/master/screenshot.jpg]]
 
 * Requirements:
 1. [[https://github.com/envyniv/RacersFont][RacersFont]]
