@@ -1,0 +1,48 @@
+/* ==UserStyle==
+@name           Slack Racers Font
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    Slack RacersFont
+@homepageURL    https://github.com/bagnaram/slack-racers-font
+@author         bagnaram
+@license        CC-BY-NC-SA-4.0
+==/UserStyle== */
+
+@-moz-document domain("app.slack.com") {
+    .p-channel_sidebar--classic_nav, [lang="ja-JP"] .p-channel_sidebar:not(.p-channel_sidebar--classic_nav) {
+	font-size: 15px;
+	font-family: RacersFont;
+    }
+    
+    .p-classic_nav__model__title__name {
+	font-size: 24px;
+	font-family: RacersFont;
+    }
+    
+    .c-button-unstyled {
+	font-family: RacersFont;
+    }
+    
+    .c-message__sender {
+	font-family: RacersFont;
+    }
+    
+    .p-member_profile_name__title {
+	font-family: RacersFont;
+    }
+    
+    .p-member_profile_picture {
+	display: none;
+    }
+    
+    .c-tooltip__tip {
+	font-family: RacersFont;
+    }
+    .c-button {
+	font-family: RacersFont;
+    }
+    
+    .p-flexpane__title_container {
+	font-family: RacersFont;
+    }
+}
