@@ -8,6 +8,6 @@ bloat!
 
 * Requirements:
 1. [[https://github.com/envyniv/RacersFont][RacersFont]]
-2. Stylus browser extension
+2. [[https://add0n.com/stylus.html][Stylus browser extension]]
 
 [[https://github.com/bagnaram/slack-racers-font/raw/master/slack-racers-font.user.css][Install With Stylus]]
