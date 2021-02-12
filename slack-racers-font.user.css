@@ -1,48 +1,65 @@
 /* ==UserStyle==
 @name           Slack Racers Font
 @namespace      github.com/openstyles/stylus
-@version        1.0.0
+@version        1.0.2
 @description    Slack RacersFont
 @homepageURL    https://github.com/bagnaram/slack-racers-font
 @author         bagnaram
 @license        CC-BY-NC-SA-4.0
+@preprocessor stylus
+@var  checkbox avatar-disable "Disable User Avatars from displaying" 0
+@var range    font-size  "Font Size" [17, 1, 30, 1, "pt"]
 ==/UserStyle== */
 
 @-moz-document domain("app.slack.com") {
     .p-channel_sidebar--classic_nav, [lang="ja-JP"] .p-channel_sidebar:not(.p-channel_sidebar--classic_nav) {
-	font-size: 15px;
-	font-family: RacersFont;
+    font-size: font-size !important;
+    font-family: RacersFont;
     }
-    
+
     .p-classic_nav__model__title__name {
-	font-size: 24px;
-	font-family: RacersFont;
+    font-size: font-size !important;
+    font-family: RacersFont;
     }
-    
+
     .c-button-unstyled {
-	font-family: RacersFont;
+    font-family: RacersFont;
+    font-size: font-size !important;
+
     }
-    
+
     .c-message__sender {
-	font-family: RacersFont;
+    font-family: RacersFont;
     }
-    
+
     .p-member_profile_name__title {
-	font-family: RacersFont;
+    font-family: RacersFont;
     }
-    
+
     .p-member_profile_picture {
-	display: none;
+    display: none;
     }
-    
+
     .c-tooltip__tip {
-	font-family: RacersFont;
+    font-family: RacersFont;
     }
     .c-button {
-	font-family: RacersFont;
+    font-family: RacersFont;
     }
-    
+
     .p-flexpane__title_container {
-	font-family: RacersFont;
+    font-family: RacersFont;
+    font-size: font-size !important;
+
+    }
+
+    /* Remove avatars */
+    if avatar-disable {
+        .c-avatar {
+        display: none;
+        }
+        .p-member_profile_card__header {
+        display: none;
+        }
     }
 }
