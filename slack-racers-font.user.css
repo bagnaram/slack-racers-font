@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Slack Racers Font
 @namespace      github.com/openstyles/stylus
-@version        1.0.2
+@version        1.0.4
 @description    Slack RacersFont
 @homepageURL    https://github.com/bagnaram/slack-racers-font
 @updateURL      https://github.com/bagnaram/slack-racers-font/raw/master/slack-racers-font.user.css
@@ -9,6 +9,7 @@
 @license        CC-BY-NC-SA-4.0
 @preprocessor stylus
 @var  checkbox avatar-disable "Disable User Avatars from displaying" 0
+@var  checkbox remove-bloat "Remove various bloat from interface" 1
 @var range    font-size  "Font Size" [17, 1, 30, 1, "pt"]
 ==/UserStyle== */
 
@@ -52,6 +53,35 @@
     font-family: RacersFont;
     font-size: font-size !important;
 
+    }
+
+    .c-icon--arrow-up-medium::before {
+    font-size: font-size !important;
+    }
+
+    /* Remove bloat */
+    if remove-bloat {
+        #addMoreChannels {
+            display: none;
+        }
+        #addMoreDM {
+            display: none;
+        }
+        .p-shortcuts_menu_trigger_button_left_column {
+            display: none;
+        }
+        .p-workspace__input.p-message_input .c-texty_input__container:not(.c-texty_input__container--expanded):not(.c-texty_input__container--no_actions) .p-message_input_field:not(.c-texty_input--double_decker) {
+            padding-left: 16px;
+        }
+        .p-workspace__input.p-message_input .c-texty_input__container:not(.c-texty_input__container--expanded):not(.c-texty_input__container--no_actions) .p-message_input_field:not(.c-texty_input--double_decker) .ql-placeholder {
+            left: 16px;
+        }
+        .c-texty_input__button ~ .c-texty_input__button ~ .c-texty_input__button ~ .c-texty_input__button {
+            display: none;
+        }
+        .p-notification_bar {
+            display: none;
+        }
     }
 
     /* Remove avatars */
