@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Slack Racers Font
 @namespace      github.com/openstyles/stylus
-@version        1.0.4
+@version        1.0.5
 @description    Slack RacersFont
 @homepageURL    https://github.com/bagnaram/slack-racers-font
 @updateURL      https://github.com/bagnaram/slack-racers-font/raw/master/slack-racers-font.user.css
@@ -10,53 +10,79 @@
 @preprocessor stylus
 @var  checkbox avatar-disable "Disable User Avatars from displaying" 0
 @var  checkbox remove-bloat "Remove various bloat from interface" 1
+@var  checkbox system-dark "Inherit Dark-mode from system" 1
 @var range    font-size  "Font Size" [17, 1, 30, 1, "pt"]
 ==/UserStyle== */
-
 @-moz-document domain("app.slack.com") {
-    .p-channel_sidebar--classic_nav, [lang="ja-JP"] .p-channel_sidebar:not(.p-channel_sidebar--classic_nav) {
-    font-size: font-size !important;
-    font-family: RacersFont;
+
+    if system-dark {
+        @media (prefers-color-scheme: light) {
+            .sk-client-theme--dark {
+                --sk_primary_foreground: unset;
+                --sk_primary_background: unset;
+                --sk_inverted_foreground: unset;
+                --sk_inverted_background: unset;
+                --sk_foreground_max: unset;
+                --sk_foreground_high: unset;
+                --sk_foreground_low: unset;
+                --sk_foreground_min: unset;
+                --sk_foreground_max_solid: unset;
+                --sk_foreground_high_solid: unset;
+                --sk_foreground_low_solid: unset;
+                --sk_foreground_min_solid: unset;
+                --sk_highlight: unset;
+                --sk_highlight_hover: unset;
+            }
+
+            .sk-client-theme--dark,
+            .sk-client-theme--light {
+                --sk_highlight_accent: unset;
+                --sk_secondary_highlight: unset;
+            }
+        }
+    }
+    .p-channel_sidebar--classic_nav,
+    [lang="ja-JP"] .p-channel_sidebar:not(.p-channel_sidebar--classic_nav) {
+        font-size: font-size !important;
+        font-family: RacersFont;
     }
 
     .p-classic_nav__model__title__name {
-    font-size: font-size !important;
-    font-family: RacersFont;
+        font-size: font-size !important;
+        font-family: RacersFont;
     }
 
     .c-button-unstyled {
-    font-family: RacersFont;
-    font-size: font-size !important;
-
+        font-family: RacersFont;
+        font-size: font-size !important;
     }
 
     .c-message__sender {
-    font-family: RacersFont;
+        font-family: RacersFont;
     }
 
     .p-member_profile_name__title {
-    font-family: RacersFont;
+        font-family: RacersFont;
     }
 
     .p-member_profile_picture {
-    display: none;
+        display: none;
     }
 
     .c-tooltip__tip {
-    font-family: RacersFont;
+        font-family: RacersFont;
     }
     .c-button {
-    font-family: RacersFont;
+        font-family: RacersFont;
     }
 
     .p-flexpane__title_container {
-    font-family: RacersFont;
-    font-size: font-size !important;
-
+        font-family: RacersFont;
+        font-size: font-size !important;
     }
 
     .c-icon--arrow-up-medium::before {
-    font-size: font-size !important;
+        font-size: font-size !important;
     }
 
     /* Remove bloat */
@@ -87,10 +113,10 @@
     /* Remove avatars */
     if avatar-disable {
         .c-avatar {
-        display: none;
+            display: none;
         }
         .p-member_profile_card__header {
-        display: none;
+            display: none;
         }
     }
 }

@@ -11,3 +11,8 @@ bloat!
 2. [[https://add0n.com/stylus.html][Stylus browser extension]]
 
 [[https://github.com/bagnaram/slack-racers-font/raw/master/slack-racers-font.user.css][Install With Stylus]]
+
+* Use System Dark Setting
+This UserCSS supports inheriting the dark/light theme setting from the system.
+In order to take effect, please set your Slack theme to _dark_ in the settings
+and enable in the UserCSS.
