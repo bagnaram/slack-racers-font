@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Slack Racers Font
 @namespace      github.com/openstyles/stylus
-@version        1.0.5
+@version        1.0.6
 @description    Slack RacersFont
 @homepageURL    https://github.com/bagnaram/slack-racers-font
 @updateURL      https://github.com/bagnaram/slack-racers-font/raw/master/slack-racers-font.user.css
@@ -38,6 +38,11 @@
             .sk-client-theme--light {
                 --sk_highlight_accent: unset;
                 --sk_secondary_highlight: unset;
+            }
+            .c-icon_button--dark,
+            .c-icon_button--dark.c-button-unstyled,
+            .c-icon_button--dark:link {
+                color: unset;
             }
         }
     }
@@ -106,6 +111,9 @@
             display: none;
         }
         .p-notification_bar {
+            display: none;
+        }
+        #addMoreApps {
             display: none;
         }
     }
